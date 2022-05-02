@@ -1,36 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="fr">
+
+<head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <title>Fisheye - photographe </title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Fisheye</title>
+</head>
+
+<body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+       <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="FishEye logo" /></a>
     </header>
     <main id="main">
-      <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-      </div>
+        <section id="photographeInfos"></section>
+        <!-- Dropdown filter -->
+        <div class="sort">
+            <label><strong>Trier par : </strong></label>
+        <div id="dropdown" class="dropdown">
+            <button id="dropbtn" class="dropbtn" aria-haspopup="listbox" aria-expanded="true" disabled><span id="sort-button-content">Popularité</span><span class="fas fa-angle-down"></span><span class="fas fa-angle-up"></span></button>
+            <div id="dropdown-content" class="dropdown-content">
+                <div class="dropdown-content--border"></div>
+                <p role="listbox" id="popularite">Popularité</p>
+                <div class="dropdown-content--border"></div>
+                <p role="listbox" id="date">Date</p>
+                <div class="dropdown-content--border titre"></div>
+                <p role="listbox" id="titre" class="titre">Titre</p>
+            </div>
+        </div>
+        </div>
+
+        <section id="photographeMedias" class="photographeMedias"></section>
+
     </main>
-    <div id="contact_modal">
-			<div class="modal">
-				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
-        </header>
-				<form>
-					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-          <button class="contact_button">Envoyer</button>
-				</form>
-			</div>
-		</div>
+
+    <div id="lightbox">
+
+    </div>
+    <!-- Contact form -->
+    <div id="contact_modal" class="contact_modal">
+        <div class="modal">
+            <header class="contact-header">
+            </header>
+            <form id="contact_form" name="contact_form" action="photographer.html" method="get">
+                <div>
+                    <label for="firstname">Prénom</label>
+                    <input type="text" id="firstname" name="prenom" aria-label="First name" aria-labelledby="firstname"/>
+                    <label for="lastname">Nom</label>
+                    <input type="text" id="lastname" name="nom" aria-label="Last name" aria-labelledby="lastname"/>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" aria-label="Email"  aria-labelledby="email" />
+                    <label for="message">Votre message:</label>
+                    <input type="text" id="message" name="message" aria-label="Your message" aria-labelledby="message" class="message"/>
+                </div>
+                <button id="send" class="send" aria-label="send" type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/scripts/factories/photographer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
-  </body>
+    <script src="/scripts/utils/PhotographerUtils.js"></script>
+    <script src="/scripts/pages/photographer.js"></script>
+    <footer id="footer">
+
+    </footer>
+    
+</body>
+
+
+
 </html>

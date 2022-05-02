@@ -28,10 +28,11 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
+    column-gap: 250px;
     margin-top: 100px;
 }
 
-.photographer_section article {
+.card-photographer {
     justify-self: center;
     display: flex;
     justify-content: center;
@@ -39,12 +40,41 @@ h1 {
     flex-direction: column;
 }
 
-.photographer_section article h2 {
+.card-photographer h2 {
     color: #D3573C;
     font-size: 36px;
+    margin-bottom: 0;
 }
 
-.photographer_section article img {
+.card-photographer img {
     height: 200px;
     width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.tagline{
+    color: black;
+}
+
+.photographer_section h3{
+    color: #901C1C;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.photographer_section p{    
+    margin: 0;
+}
+
+.location{    
+    color: #901C1C;
+}
+
+.prix{    
+    color: #525252;
 }
