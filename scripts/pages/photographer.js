@@ -88,10 +88,8 @@ async function init() {
     }
   });
   // Using keyboard for lightbox
-  document.addEventListener('keydown', (event) => {
-    if (event.target.classList.contains('lightboxMedia')) {
-      photographerUtils.arrowKey(event);
-    }
+  document.addEventListener('keydown', (e) => {
+    photographerUtils.keyDown(e);
   });
 
   // Show form value in the console

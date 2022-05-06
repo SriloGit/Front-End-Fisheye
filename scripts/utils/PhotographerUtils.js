@@ -1,5 +1,4 @@
 /* eslint-disable class-methods-use-this */
-// Utils class for other function
 class PhotographerUtils {
   // sort media switch criteria
   sortMedia(tri, mediaArray) {
@@ -169,7 +168,20 @@ class PhotographerUtils {
 
   // Use lightbox through keyboard
 
-  arrowKey(event) {
-    event.preventDefault(); // prevent default arrow key behavior
+  keyDown(e) {
+    switch (e.key) {
+      case 'ArrowLeft':
+        document.getElementById('previousMedia').click();
+        break;
+
+      case 'ArrowRight':
+        document.getElementById('nextMedia').click();
+        break;
+
+      case 'Escape':
+        document.getElementById('close').click();
+        break;
+          // no default
+    }
   }
 }
