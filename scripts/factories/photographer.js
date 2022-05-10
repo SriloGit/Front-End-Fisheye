@@ -9,7 +9,7 @@ function photographerFactory(data) {
   function getUserCardDOM() {
     const ahref = document.createElement('a');
     ahref.setAttribute('class', 'link');
-    ahref.setAttribute('aria-label', `Show ${name} Profile`);
+    ahref.setAttribute('aria-label', `${name}`);
     ahref.setAttribute('href', `photographer.html?id=${id}`);
     const article = document.createElement('article');
     const img = document.createElement('img');
@@ -45,6 +45,7 @@ function photographerFactory(data) {
 
     const mainInfos = document.createElement('div');
     mainInfos.setAttribute('class', 'photograph-infos');
+    mainInfos.setAttribute('tabindex', '0');
 
     const nomPrenom = document.createElement('h1');
     nomPrenom.setAttribute('class', 'names');
@@ -66,7 +67,8 @@ function photographerFactory(data) {
     const profileImg = document.createElement('img');
     profileImg.setAttribute('src', `assets/photographers/${portrait}`);
     profileImg.setAttribute('class', 'photographImg');
-    profileImg.setAttribute('alt', 'profilePic');
+    profileImg.setAttribute('alt', name);
+    profileImg.setAttribute('tabindex', '0');
 
     const priceLikes = document.createElement('div');
     priceLikes.setAttribute('class', 'price');
@@ -102,6 +104,7 @@ function photographerFactory(data) {
 
     const album = document.createElement('article');
     album.setAttribute('class', 'album');
+    album.setAttribute('tabindex', '0');
 
     const caption = document.createElement('div');
     caption.setAttribute('class', 'caption');
@@ -179,6 +182,7 @@ function photographerFactory(data) {
     contact.setAttribute('class', 'contactText');
     const contactMe = document.createElement('h3');
     contactMe.setAttribute('class', 'contactName');
+    contactMe.setAttribute('aria-label', 'Contact Me');
     contactMe.textContent = 'Contactez-moi';
     const contactName = document.createElement('h4');
     contactName.setAttribute('class', 'contactName');

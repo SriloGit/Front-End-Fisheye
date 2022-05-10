@@ -13,22 +13,22 @@
 
 <body>
     <header>
-       <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="FishEye logo" /></a>
+       <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="FishEye logo" aria-label="Fisheye Home page"/></a>
     </header>
     <main id="main">
         <section id="photographeInfos"></section>
         <!-- Dropdown filter -->
         <div class="sort">
             <label><strong>Trier par : </strong></label>
-        <div id="dropdown" class="dropdown">
-            <button id="dropbtn" class="dropbtn" aria-haspopup="listbox" aria-expanded="true" disabled><span id="sort-button-content">Popularité</span><span class="fas fa-angle-down"></span><span class="fas fa-angle-up"></span></button>
+        <div id="dropdown" class="dropdown" tabindex="0">
+            <button id="dropbtn" class="dropbtn" aria-haspopup="listbox" aria-expanded="true" disabled tabindex="0"><span id="sort-button-content">Popularité</span><span class="fas fa-angle-down"></span><span class="fas fa-angle-up"></span></button>
             <div id="dropdown-content" class="dropdown-content">
                 <div class="dropdown-content--border"></div>
-                <p role="listbox" id="popularite">Popularité</p>
+                <p role="listbox" id="popularite" tabindex="0">Popularité</p>
                 <div class="dropdown-content--border"></div>
-                <p role="listbox" id="date">Date</p>
+                <p role="listbox" id="date" tabindex="0">Date</p>
                 <div class="dropdown-content--border titre"></div>
-                <p role="listbox" id="titre" class="titre">Titre</p>
+                <p role="listbox" id="titre" class="titre" tabindex="0">Titre</p>
             </div>
         </div>
         </div>
