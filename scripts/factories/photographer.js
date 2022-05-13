@@ -104,7 +104,6 @@ function photographerFactory(data) {
 
     const album = document.createElement('article');
     album.setAttribute('class', 'album');
-    album.setAttribute('tabindex', '0');
 
     const caption = document.createElement('div');
     caption.setAttribute('class', 'caption');
@@ -132,6 +131,7 @@ function photographerFactory(data) {
       img.setAttribute('class', 'lightboxMedia');
       img.setAttribute('src', jpg);
       img.setAttribute('alt', title);
+      img.setAttribute('tabindex', '0');
 
       album.appendChild(img);
       album.appendChild(caption);
@@ -150,6 +150,7 @@ function photographerFactory(data) {
       source.setAttribute('src', mp4);
       source.setAttribute('type', 'video/mp4');
       source.setAttribute('class', 'lightboxImg');
+      source.setAttribute('tabindex', '0');
 
       album.appendChild(videoPlayer);
       videoPlayer.appendChild(source);
