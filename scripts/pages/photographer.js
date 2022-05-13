@@ -54,29 +54,26 @@ async function init() {
   // Photograph data
   const photographerData = await getPhotographer();
 
-  // Utils object
-  const photographerUtils = new PhotographerUtils();
-
   // Add every medias of the photograph to an array to sort them
   let mediaArray = photographerData.media;
 
   // HTML Layout
   displayPhotographerData(photographerData.photographers);
-  mediaArray = photographerUtils.sortMedia('popularite', mediaArray);
+  mediaArray = sortMedia('popularite', mediaArray);
   displayMediaData(mediaArray);
   displayNameContactData(photographerData.photographers);
 
   // Event to sort media
   document.getElementById('dropdown').addEventListener('click', (e) => {
     document.getElementById('sort-button-content').innerHTML = e.target.innerHTML;
-    mediaArray = photographerUtils.sortMedia(e.target.id, mediaArray);
+    mediaArray = sortMedia(e.target.id, mediaArray);
     displayMediaData(mediaArray);
   });
 
   // Event to add likes
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('incrementLike')) {
-      photographerUtils.incrementLike(e.target);
+      incrementLike(e.target);
     }
   });
 
@@ -84,12 +81,12 @@ async function init() {
 
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('lightboxMedia')) {
-      photographerUtils.initLightbox();
+      initLightbox();
     }
   });
   // Using keyboard for lightbox
   document.addEventListener('keydown', (e) => {
-    photographerUtils.keyDown(e);
+    keyDown(e);
   });
 
   // Show form value in the console
