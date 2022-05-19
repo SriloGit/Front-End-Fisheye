@@ -20,16 +20,17 @@
         <!-- Dropdown filter -->
         <div class="sort">
             <label><strong>Trier par : </strong></label>
-        <div id="dropdown" class="dropdown" tabindex="0">
-            <button id="dropbtn" class="dropbtn" aria-haspopup="listbox" aria-expanded="true" disabled tabindex="0"><span id="sort-button-content">Popularité</span><span class="fas fa-angle-down"></span><span class="fas fa-angle-up"></span></button>
-            <div id="dropdown-content" class="dropdown-content">
+        <div id="dropdown" class="dropdown">
+            <button id="dropbtn" class="dropbtn" role="button" aria-haspopup="listbox" aria-expanded="true" disabled><span id="sort-button-content">Popularité</span><span class="fas fa-angle-down"></span><span class="fas fa-angle-up"></span>
+            </button>
+            <ul id="dropdown-content" class="dropdown-content" role="listbox" aria-activedescendant="popularite" aria-selected="true" aria-labelledby="sort-button-content">
                 <div class="dropdown-content--border"></div>
-                <p role="listbox" id="popularite" tabindex="0">Popularité</p>
+                <li role="option" id="popularite">Popularité</li>
                 <div class="dropdown-content--border"></div>
-                <p role="listbox" id="date" tabindex="0">Date</p>
+                <li aria-selected="true" role="option" id="date">Date</li>
                 <div class="dropdown-content--border titre"></div>
-                <p role="listbox" id="titre" class="titre" tabindex="0">Titre</p>
-            </div>
+                <li role="option" id="titre" class="titre">Titre</li>
+            </ul>
         </div>
         </div>
 

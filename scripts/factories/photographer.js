@@ -124,6 +124,7 @@ function photographerFactory(data) {
     const heart = document.createElement('span');
     heart.setAttribute('aria-label', 'likes');
     heart.setAttribute('class', 'fas fa-heart incrementLike');
+    heart.setAttribute('tabindex', '0');
 
     // If JPG -> <img>
     if (jpg.split('.').pop() === 'jpg') {

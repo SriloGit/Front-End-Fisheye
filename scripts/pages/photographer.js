@@ -70,6 +70,15 @@ async function init() {
     displayMediaData(mediaArray);
   });
 
+  // Event to sort media with keyboard
+  document.getElementById('dropdown').addEventListener('keydown', (e) => {
+    if (e.code === 'Enter') {
+      document.getElementById('sort-button-content').innerHTML = e.target.innerHTML;
+      mediaArray = sortMedia(e.target.id, mediaArray);
+      displayMediaData(mediaArray);
+    }
+  });
+
   // Event to add likes
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('incrementLike')) {
@@ -77,13 +86,30 @@ async function init() {
     }
   });
 
-  // Init Lightbox on click
+  // Event to add likes with keyboard
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Enter') {
+      if (e.target.classList.contains('incrementLike')) {
+        incrementLike(e.target);
+      }
+    }
+  });
 
+  // Init Lightbox on click
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('lightboxMedia')) {
       initLightbox();
     }
   });
+  // Init Lightbox with keyboard
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Enter') {
+      if (e.target.classList.contains('lightboxMedia')) {
+        initLightbox();
+      }
+    }
+  });
+
   // Using keyboard for lightbox
   document.addEventListener('keydown', (e) => {
     keyDown(e);
