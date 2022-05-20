@@ -71,10 +71,24 @@ async function init() {
   });
 
   // Event to sort media with keyboard
+  let isDropDownOpen = false;
   document.getElementById('dropdown').addEventListener('keydown', (e) => {
     if (e.code === 'Enter') {
-      document.getElementById('sort-button-content').innerHTML = e.target.innerHTML;
-      mediaArray = sortMedia(e.target.id, mediaArray);
+      if (isDropDownOpen === false) {
+        isDropDownOpen = true;
+        document.getElementById('dropdown-content').style.display = 'block';
+        document.querySelectorAll('.dropdown_option').forEach((element) => {
+          element.addEventListener('keydown', (event) => {
+            if (event.code === 'Enter') {
+              mediaArray = sortMedia(element.id, mediaArray);
+              document.getElementById('sort-button-content').innerHTML = element.innerHTML;
+            }
+          });
+        });
+      } else {
+        document.getElementById('dropdown-content').style.display = 'none';
+        isDropDownOpen = false;
+      }
       displayMediaData(mediaArray);
     }
   });

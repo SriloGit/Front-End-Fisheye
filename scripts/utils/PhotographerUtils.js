@@ -64,6 +64,13 @@ function initLightbox() {
       // Use the function to show media
       util.showMedia(index);
     });
+    media.addEventListener('keydown', (e) => {
+      if (e.code === 'Enter') {
+        lightbox.classList.add('active');
+        // Use the function to show media
+        util.showMedia(index);
+      }
+    });
   });
 }
 
