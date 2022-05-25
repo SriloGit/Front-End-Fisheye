@@ -24,11 +24,11 @@
             <button id="dropbtn" class="dropbtn" role="button" aria-haspopup="listbox" aria-expanded="true" disabled><span id="sort-button-content">Popularité</span><span class="fas fa-angle-down"></span><span class="fas fa-angle-up"></span>
             </button>
             <ul id="dropdown-content" class="dropdown-content" role="listbox" aria-activedescendant="popularite" aria-labelledby="sort-button-content">
-                <div class="dropdown-content--border"></div>
+                <li class="dropdown-content--border"></li>
                 <li role="option" id="popularite" tabindex="0" class="dropdown_option">Popularité</li>
-                <div class="dropdown-content--border"></div>
+                <li class="dropdown-content--border"></li>
                 <li role="option" id="date" tabindex="0" class="dropdown_option">Date</li>
-                <div class="dropdown-content--border titre"></div>
+                <li class="dropdown-content--border titre"></li>
                 <li role="option" id="titre" class="titre dropdown_option" tabindex="0">Titre</li>
             </ul>
         </div>
@@ -49,13 +49,13 @@
             <form id="contact_form" name="contact_form" action="photographer.html" method="get">
                 <div>
                     <label for="firstname">Prénom</label>
-                    <input type="text" id="firstname" name="prenom" aria-label="First name" aria-labelledby="firstname"tabindex="1"/>
+                    <input type="text" id="firstname" name="prenom" aria-label="First name" aria-labelledby="firstname" tabindex="1"/>
                     <label for="lastname">Nom</label>
                     <input type="text" id="lastname" name="nom" aria-label="Last name" aria-labelledby="lastname" tabindex="1" />
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" aria-label="Email"  aria-labelledby="email" tabindex="1" />
                     <label for="message">Votre message:</label>
-                    <input type="text" id="message" name="message" aria-label="Your message" aria-labelledby="message" class="message"tabindex="1" />
+                    <input type="text" id="message" name="message" aria-label="Your message" aria-labelledby="message" class="message" tabindex="1" />
                 </div>
                 <button id="send" class="send" aria-label="send" type="submit">Envoyer</button>
             </form>
