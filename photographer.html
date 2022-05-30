@@ -24,12 +24,12 @@
             <button id="dropbtn" class="dropbtn" role="button" aria-haspopup="listbox" aria-expanded="true" disabled><span id="sort-button-content">Popularité</span><span class="fas fa-angle-down"></span><span class="fas fa-angle-up"></span>
             </button>
             <ul id="dropdown-content" class="dropdown-content" role="listbox" aria-activedescendant="popularite" aria-labelledby="sort-button-content">
-                <li class="dropdown-content--border"></li>
-                <li role="option" id="popularite" tabindex="0" class="dropdown_option">Popularité</li>
-                <li class="dropdown-content--border"></li>
-                <li role="option" id="date" tabindex="0" class="dropdown_option">Date</li>
-                <li class="dropdown-content--border titre"></li>
-                <li role="option" id="titre" class="titre dropdown_option" tabindex="0">Titre</li>
+                <div class="dropdown-content--border"></div>
+                <li role="option" id="popularite" tabindex="0" class="dropdown_option" aria-label="Popularity">Popularité</li>
+                <div class="dropdown-content--border"></div>
+                <li role="option" id="date" tabindex="0" class="dropdown_option" aria-label="Date">Date</li>
+                <div class="dropdown-content--border titre"></div>
+                <li role="option" id="titre" class="titre dropdown_option" tabindex="0" aria-label="Titre">Titre</li>
             </ul>
         </div>
         </div>
