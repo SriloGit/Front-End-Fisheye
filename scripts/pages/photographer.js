@@ -64,7 +64,7 @@ async function init() {
   displayNameContactData(photographerData.photographers);
 
   // Event to sort media
-  document.getElementById('dropdown').addEventListener('click', (e) => {
+  document.getElementById('dropdown-content').addEventListener('click', (e) => {
     document.getElementById('sort-button-content').innerHTML = e.target.innerHTML;
     mediaArray = sortMedia(e.target.id, mediaArray);
     displayMediaData(mediaArray);
@@ -72,7 +72,7 @@ async function init() {
 
   // Event to sort media with keyboard
   let isDropDownOpen = false;
-  document.getElementById('dropdown').addEventListener('keydown', (e) => {
+  document.getElementById('dropdown-content').addEventListener('keydown', (e) => {
     if (e.code === 'Enter') {
       if (isDropDownOpen === false) {
         isDropDownOpen = true;
