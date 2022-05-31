@@ -380,3 +380,29 @@ p, span.no_selection {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
+
+.formData[data-error]::after {
+    content: attr(data-error);
+    font-size: 18px;
+    color: #901C1C;
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-align: left;
+    line-height: 0.3;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  .formData[data-error-visible=true]::after {
+    opacity: 1;
+  }
+  
+  .formData[data-error-visible=true] .text-control {
+    border: 2px solid #e54858;
+  }
+  
+  .formData[data-error-visible=false] .text-control {
+    border: 2px solid #3876ac;
+  }
+  

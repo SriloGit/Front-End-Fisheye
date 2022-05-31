@@ -194,6 +194,8 @@ function photographerFactory(data) {
     closeContact.setAttribute('src', 'assets/icons/close.svg');
     closeContact.setAttribute('onclick', 'closeModal()');
     closeContact.setAttribute('alt', 'close Contact Form');
+    closeContact.setAttribute('tabindex', '0');
+    closeContact.setAttribute('class', 'closeModal');
 
     contactHeader.appendChild(contact);
     contact.appendChild(contactMe);

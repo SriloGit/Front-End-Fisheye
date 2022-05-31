@@ -128,13 +128,6 @@ async function init() {
   document.addEventListener('keydown', (e) => {
     keyDown(e);
   });
-
-  // Show form value in the console
-  document.getElementById('send').addEventListener('click', (e) => {
-    e.preventDefault();
-    // eslint-disable-next-line no-console
-    console.log(document.getElementById('firstname').value, document.getElementById('lastname').value, document.getElementById('email').value);
-  });
 }
 
 init();

@@ -48,16 +48,24 @@
             </header>
             <form id="contact_form" name="contact_form" action="photographer.html" method="get">
                 <div>
-                    <label for="firstname">Prénom</label>
-                    <input type="text" id="firstname" name="prenom" aria-label="First name" aria-labelledby="firstname" tabindex="1"/>
-                    <label for="lastname">Nom</label>
-                    <input type="text" id="lastname" name="nom" aria-label="Last name" aria-labelledby="lastname" tabindex="1" />
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" aria-label="Email"  aria-labelledby="email" tabindex="1" />
-                    <label for="message">Votre message:</label>
-                    <input type="text" id="message" name="message" aria-label="Your message" aria-labelledby="message" class="message" tabindex="1" />
+                    <div class="formData">
+                        <label for="firstname">Prénom</label>
+                        <input type="text" id="firstname" name="prenom" aria-label="First name" aria-labelledby="firstname"/>
+                    </div>
+                    <div class="formData">
+                        <label for="lastname">Nom</label>
+                        <input type="text" id="lastname" name="nom" aria-label="Last name" aria-labelledby="lastname"/>
+                    </div>
+                    <div class="formData">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" aria-label="Email"  aria-labelledby="email"/>
+                    </div>
+                    <div class="formData">
+                        <label for="message">Votre message:</label>
+                        <input type="text" id="message" name="message" aria-label="Your message" aria-labelledby="message" class="message"/>
+                    </div>
                 </div>
-                <button id="send" class="send" aria-label="send" type="submit">Envoyer</button>
+                <button id="send" class="send" aria-label="send" type="submit" tabindex="0">Envoyer</button>
             </form>
         </div>
     </div>
